@@ -25,12 +25,15 @@
 
 ## GitHub Pages 배포
 
+이 저장소는 GitHub Actions workflow 방식으로 GitHub Pages를 배포합니다.
+
 1. GitHub에서 새 저장소를 만듭니다.
 2. 이 폴더의 파일을 저장소 루트에 업로드하거나 `git push`로 올립니다.
 3. 저장소의 `Settings`로 이동합니다.
 4. 왼쪽 메뉴에서 `Pages`를 선택합니다.
-5. `Build and deployment`에서 `Source`를 `Deploy from a branch`로 설정합니다.
-6. `Branch`를 `main`, 폴더를 `/ (root)`로 선택하고 저장합니다.
-7. 잠시 후 표시되는 Pages 주소로 접속해 `index.html`, `styles.css`, `script.js`, 이미지가 정상 로드되는지 확인합니다.
+5. `Build and deployment`에서 `Source`를 `GitHub Actions`로 설정합니다.
+6. `main` 브랜치에 push하면 `.github/workflows/deploy.yml`이 실행됩니다.
+7. `Actions` 탭에서 `Deploy GitHub Pages` workflow가 성공했는지 확인합니다.
+8. Pages 주소로 접속해 `index.html`, `styles.css`, `script.js`, 이미지가 정상 로드되는지 확인합니다.
 
 개인 메인 페이지 주소를 쓰려면 저장소 이름을 `YOUR_GITHUB_ID.github.io` 형식으로 만들면 됩니다.
